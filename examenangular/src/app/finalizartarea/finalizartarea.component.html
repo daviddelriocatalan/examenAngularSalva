@@ -1,0 +1,10 @@
+<br>
+<h3> Fin de la Tarea {{ retorno }}</h3>              
+<div class="alert alert-dark" role="alert">
+    <br>                                          
+     <div class="text-center">
+         <p> {{ nombreTarea.nombre }} </p>
+        <button class="btn btn-danger" routerLinkActive="active" routerLink="../../../tareas" (click)="finalizarTarea()">Finalizar</button> &nbsp;
+        <button class="btn btn-primary" routerLinkActive="active" routerLink="../../../tareas">Cancelar</button>
+    </div>
+</div>

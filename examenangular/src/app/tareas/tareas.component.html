@@ -1,0 +1,25 @@
+<br>
+<h3>Listado de Tareas</h3>
+<div style="width:75%">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr class="filters">
+                <th>id</th>
+                <th>nombre</th>
+                <th>estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let tarea of tareas">             
+                <td> {{ tarea.id }} </td>
+                <td> {{ tarea.nombre }} </td>
+                <td> {{ tarea.estado }} </td>
+                <td class=text-center *ngIf = "tarea.estado == 'Pendiente'">
+                    <button class="btn btn-danger" routerLinkActive="active" routerLink="./finalizartarea/{{ tarea.id }}" >Finalizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Total Pendientes: {{ pendientes }}</h4>
+    <h4>Total Realizadas: {{ realizadas }}</h4>
+</div>
